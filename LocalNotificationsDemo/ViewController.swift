@@ -15,19 +15,25 @@ class ViewController: UIViewController {
     
     internal let center = UNUserNotificationCenter.current()
     let userNotificationManager = UserNotificationManager.shared
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timeIntervalButton.layer.borderColor = UIColor.darkGray.cgColor
-        timeIntervalButton.layer.borderWidth = 0.8
-        timeIntervalButton.layer.cornerRadius = 5
-        timeIntervalButton.layer.masksToBounds = true
-
-//        center.getDeliveredNotifications { (notofications) in
-//
-//        }
-
+        applyMainDesign()
+        
+    }
+    
+    func applyMainDesign() {
+        
+        for subview in view.subviews {
+            
+            guard let button = subview as? UIButton else { continue }
+            
+            button.layer.borderColor = UIColor.darkGray.cgColor
+            button.layer.borderWidth = 0.8
+            button.layer.cornerRadius = 5
+            button.layer.masksToBounds = true
+        }
     }
 
     @IBAction func timeIntervalButtonTapped(_ sender: UIButton) {
