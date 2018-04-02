@@ -12,6 +12,7 @@ import UserNotifications
 class ViewController: UIViewController {
     
     @IBOutlet weak var timeIntervalButton: UIButton!
+    @IBOutlet weak var calendarButton: UIButton!
     
     internal let center = UNUserNotificationCenter.current()
     let userNotificationManager = UserNotificationManager.shared
@@ -37,10 +38,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func timeIntervalButtonTapped(_ sender: UIButton) {
-        
         userNotificationManager.addDefaultNotification()
-        
     }
-
+    
+    @IBAction func calendarButtonTapped(_ sender: UIButton) {
+        userNotificationManager.addCalendarNotification()
+    }
+    
 }
 
