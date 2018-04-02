@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        
         return true
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -44,6 +52,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("handling notification")
+        if let notification = response.notification.request.content.userInfo as? [String : AnyObject] {
+            let message = parseRemoteNotification(notification: notification)
+            print(message as Any)
+        }
+        completionHandler()
+    }
+    
+    private func parseRemoteNotification(notification:[String:AnyObject]) -> String? {
+        if let aps = notification["aps"] as? [String:AnyObject] {
+            let alert = aps["alert"] as? String
+            return alert
+        }
+        
+        return nil
     }
 
 
