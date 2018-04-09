@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="DetailNotification" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="160"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eTF-3K-IZ8">
+                                <rect key="frame" x="15" y="15" width="310" height="130"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-b8-p5W">
+                                        <rect key="frame" x="0.0" y="0.0" width="56.5" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUn-x6-MOB">
+                                                <rect key="frame" x="0.0" y="0.0" width="35.5" height="19"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5N9-Gm-7DK">
+                                                <rect key="frame" x="0.0" y="24" width="56.5" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dancer.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0eB-6B-SBv">
+                                        <rect key="frame" x="0.0" y="45" width="310" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="85" id="TAh-CU-Jie"/>
+                                            <constraint firstAttribute="width" constant="310" id="Vj0-dX-7GS"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65450218589999998" green="0.80336230990000002" blue="0.793158904" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="eTF-3K-IZ8" secondAttribute="bottom" constant="15" id="1Re-Al-hbp"/>
+                            <constraint firstItem="eTF-3K-IZ8" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="15" id="49U-Xx-lhF"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="eTF-3K-IZ8" secondAttribute="trailing" constant="15" id="ex8-ar-LxX"/>
+                            <constraint firstItem="eTF-3K-IZ8" firstAttribute="top" secondItem="2BE-c3-nQJ" secondAttribute="top" constant="15" id="lpL-Bg-TIg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2BE-c3-nQJ"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="340" height="160"/>
+                    <connections>
+                        <outlet property="imageView" destination="0eB-6B-SBv" id="Iag-cg-Ix1"/>
+                        <outlet property="subtitleLabel" destination="5N9-Gm-7DK" id="VPr-Po-DZc"/>
+                        <outlet property="titleLabel" destination="wUn-x6-MOB" id="gqP-WO-nz7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.59999999999999" y="132.23388305847078"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dancer.jpg" width="566" height="346"/>
+    </resources>
+</document>

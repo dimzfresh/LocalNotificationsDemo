@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             
             guard let button = subview as? UIButton else { continue }
             
-            button.layer.borderColor = UIColor.darkGray.cgColor
+            button.layer.borderColor = UIColor.white.cgColor
             button.layer.borderWidth = 0.8
             button.layer.cornerRadius = 5
             button.layer.masksToBounds = true
@@ -42,7 +42,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calendarButtonTapped(_ sender: UIButton) {
-        userNotificationManager.addCalendarNotification()
+        userNotificationManager.addNotificationWithCalendar()
+    }
+    
+    @IBAction func locationButtonTapped(_ sender: UIButton) {
+        userNotificationManager.addNotificationWithCalendar()
+    }
+    
+    @IBAction func notificationWithAttachmentButtonTapped(_ sender: UIButton) {
+        userNotificationManager.addNotificationWithAttachment(.image)
+    }
+    
+    @IBAction func notificationWithCustomUIButtonTapped(_ sender: UIButton) {
+        userNotificationManager.addLocalCustomUI()
+    }
+    
+    @IBAction func notificationWithCustomActionsButtonTapped(_ sender: UIButton) {
+        userNotificationManager.addCustomUIWithAction()
     }
     
 }

@@ -19,40 +19,104 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZG-0D-inm">
-                                <rect key="frame" x="67.5" y="100" width="240" height="45"/>
+                                <rect key="frame" x="57.5" y="100" width="260" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="4Xi-Ad-nCF"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="av2-c5-RKW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="av2-c5-RKW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Time interval notification">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="timeIntervalButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6cK-sP-hjl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyH-DW-9E2">
-                                <rect key="frame" x="67.5" y="175" width="240" height="45"/>
+                                <rect key="frame" x="57.5" y="170" width="260" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="a8I-qA-ful"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="a8I-qA-ful"/>
                                     <constraint firstAttribute="height" constant="45" id="u9A-SR-S75"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Calendar notification">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="calendarButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ej2-H6-qGB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdr-mD-EzX">
+                                <rect key="frame" x="57" y="240" width="260" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="Dz2-w4-m3z"/>
+                                    <constraint firstAttribute="height" constant="45" id="Hsj-xT-stg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Location notification">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="locationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THL-Du-KZA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EP3-Uh-I8B">
+                                <rect key="frame" x="57.5" y="310" width="260" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="2Dd-TZ-x15"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="HR9-4e-eaK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Notification with attachment">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="notificationWithAttachmentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJt-lA-tIY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8O-6D-h0j">
+                                <rect key="frame" x="57.5" y="380" width="260" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="XMW-v4-EV0"/>
+                                    <constraint firstAttribute="height" constant="45" id="pwv-9W-LWZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Notification with custom UI">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="notificationWithCustomUIButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sHI-A8-O0b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agh-KV-zDt">
+                                <rect key="frame" x="57.5" y="450" width="260" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="VRm-73-FsE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="dOz-bY-KPn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Notification with custom actions">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="notificationWithCustomActionsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A4L-EN-lQk"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.70080181349157922" green="0.79099008747797372" blue="0.80336230990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.53725490196078429" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="EP3-Uh-I8B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3LV-ij-ERm"/>
+                            <constraint firstItem="rdr-mD-EzX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6RY-Kx-v4D"/>
                             <constraint firstItem="lZG-0D-inm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DFC-Ie-9ie"/>
                             <constraint firstItem="NyH-DW-9E2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DVI-gE-Ngd"/>
-                            <constraint firstItem="NyH-DW-9E2" firstAttribute="top" secondItem="lZG-0D-inm" secondAttribute="bottom" constant="30" id="Kpt-I6-aDj"/>
+                            <constraint firstItem="NyH-DW-9E2" firstAttribute="top" secondItem="lZG-0D-inm" secondAttribute="bottom" constant="25" id="Kpt-I6-aDj"/>
+                            <constraint firstItem="agh-KV-zDt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nri-de-DbW"/>
+                            <constraint firstItem="agh-KV-zDt" firstAttribute="top" secondItem="B8O-6D-h0j" secondAttribute="bottom" constant="25" id="Q69-HG-nuc"/>
                             <constraint firstItem="lZG-0D-inm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="WGs-dX-ZRE"/>
+                            <constraint firstItem="B8O-6D-h0j" firstAttribute="top" secondItem="EP3-Uh-I8B" secondAttribute="bottom" constant="25" id="f5s-vH-u77"/>
+                            <constraint firstItem="B8O-6D-h0j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mNk-7w-Efl"/>
+                            <constraint firstItem="rdr-mD-EzX" firstAttribute="top" secondItem="NyH-DW-9E2" secondAttribute="bottom" constant="25" id="nMF-yI-RWt"/>
+                            <constraint firstItem="EP3-Uh-I8B" firstAttribute="top" secondItem="rdr-mD-EzX" secondAttribute="bottom" constant="25" id="xfI-Lh-DSo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
